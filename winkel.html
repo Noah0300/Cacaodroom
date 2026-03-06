@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Koop chocolade online bij De Cacaodroom met filters en snelle checkout." />
+    <title>Winkel | De Cacaodroom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Direct naar inhoud</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html"><img src="assets/logo-cacaodroom.svg" alt="Logo De Cacaodroom" /></a>
+        <button class="mobile-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav id="site-nav" class="main-nav" aria-label="Hoofdnavigatie">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="over-ons.html">Over ons</a></li>
+            <li><a href="producten.html">Onze producten</a></li>
+            <li><a href="ervaringen.html">Chocolade ervaringen</a></li>
+            <li><a class="active" href="winkel.html">Winkel</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" class="section">
+      <div class="container">
+        <h1>Online winkel</h1>
+        <p>Gebruik de filters om jouw perfecte chocolade te vinden.</p>
+        <div class="filters" aria-label="Productfilters">
+          <select data-filter="taste">
+            <option value="all">Smaak: alles</option>
+            <option value="noten">Noten</option>
+            <option value="fruit">Fruit</option>
+            <option value="karamel">Karamel</option>
+          </select>
+          <select data-filter="type">
+            <option value="all">Type: alles</option>
+            <option value="donker">Donker</option>
+            <option value="melk">Melk</option>
+            <option value="wit">Wit</option>
+          </select>
+          <select data-filter="pack">
+            <option value="all">Verpakking: alles</option>
+            <option value="doos">Doos</option>
+            <option value="reep">Reep</option>
+            <option value="cadeau">Cadeau</option>
+          </select>
+        </div>
+
+        <p id="product-count" class="notice" data-empty="false"></p>
+
+        <div class="grid-3">
+          <article class="card" data-product data-taste="noten" data-type="donker" data-pack="reep">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1511381939415-c1f69419868d?auto=format&fit=crop&w=900&q=80" alt="Donkere reep met noten" />
+            <div class="card-content"><h3>72% Donker Noten</h3><p>€6,95</p></div>
+          </article>
+          <article class="card" data-product data-taste="fruit" data-type="wit" data-pack="doos">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=900&q=80" alt="Witte chocolade met fruit" />
+            <div class="card-content"><h3>Wit & Framboos</h3><p>€8,95</p></div>
+          </article>
+          <article class="card" data-product data-taste="karamel" data-type="melk" data-pack="cadeau">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1548907040-4baa42d10919?auto=format&fit=crop&w=900&q=80" alt="Melkpralines met karamel" />
+            <div class="card-content"><h3>Praline Karamelbox</h3><p>€14,95</p></div>
+          </article>
+        </div>
+
+        <section class="section">
+          <h2>Snel afrekenen</h2>
+          <form id="checkout-form" class="card card-content" novalidate>
+            <div class="form-grid">
+              <label>Naam<input required type="text" name="naam" /></label>
+              <label>E-mail<input required type="email" name="email" /></label>
+              <label>Adres<input required type="text" name="adres" /></label>
+              <label>
+                Betaalmethode
+                <select required name="payment">
+                  <option>iDEAL</option>
+                  <option>PayPal</option>
+                  <option>Creditcard</option>
+                </select>
+              </label>
+            </div>
+            <button class="btn gold" type="submit">Bestelling afronden</button>
+            <p id="checkout-message" class="notice" data-empty="true" aria-live="polite"></p>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <span>© <span data-year></span> De Cacaodroom</span>
+        <span>Veilig betalen via iDEAL, PayPal of creditcard</span>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

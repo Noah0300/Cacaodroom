@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Neem contact op met De Cacaodroom." />
+    <title>Contact | De Cacaodroom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Direct naar inhoud</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html"><img src="assets/logo-cacaodroom.svg" alt="Logo De Cacaodroom" /></a>
+        <button class="mobile-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav id="site-nav" class="main-nav" aria-label="Hoofdnavigatie">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="over-ons.html">Over ons</a></li>
+            <li><a href="producten.html">Onze producten</a></li>
+            <li><a href="ervaringen.html">Chocolade ervaringen</a></li>
+            <li><a href="winkel.html">Winkel</a></li>
+            <li><a class="active" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" class="section">
+      <div class="container hero-grid">
+        <div>
+          <h1>Contact</h1>
+          <p>Heb je vragen over onze producten, workshops of bestellingen? We helpen je graag.</p>
+          <form id="contact-form" class="card card-content" novalidate>
+            <div class="form-grid">
+              <label>Naam<input required type="text" name="naam" /></label>
+              <label>E-mail<input required type="email" name="email" /></label>
+            </div>
+            <label>Bericht<textarea required name="bericht"></textarea></label>
+            <button class="btn" type="submit">Versturen</button>
+            <p id="contact-message" class="notice" data-empty="true" aria-live="polite"></p>
+          </form>
+
+          <p>
+            <strong>Adres:</strong> Cacaostraat 12, 1234 AB Brugge<br />
+            <strong>Telefoon:</strong> +31 (0)20 123 45 67<br />
+            <strong>Volg ons:</strong> Instagram · Facebook
+          </p>
+        </div>
+
+        <div class="map-wrap">
+          <iframe
+            title="Kaart De Cacaodroom"
+            src="https://maps.google.com/maps?q=brugge&t=&z=12&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <span>© <span data-year></span> De Cacaodroom</span>
+        <span>Wij reageren doorgaans binnen 1 werkdag</span>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

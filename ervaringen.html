@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Workshops en rondleidingen bij De Cacaodroom." />
+    <title>Chocolade ervaringen | De Cacaodroom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Direct naar inhoud</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html"><img src="assets/logo-cacaodroom.svg" alt="Logo De Cacaodroom" /></a>
+        <button class="mobile-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav id="site-nav" class="main-nav" aria-label="Hoofdnavigatie">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="over-ons.html">Over ons</a></li>
+            <li><a href="producten.html">Onze producten</a></li>
+            <li><a class="active" href="ervaringen.html">Chocolade ervaringen</a></li>
+            <li><a href="winkel.html">Winkel</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" class="section">
+      <div class="container hero-grid">
+        <div>
+          <h1>Workshops & rondleidingen</h1>
+          <p>
+            Leer tempereren, vul je eigen bonbons en krijg een exclusieve blik in onze fabriek. Geschikt voor
+            vrienden, families en teams.
+          </p>
+          <form id="reserve-form" class="card card-content" novalidate>
+            <div class="form-grid">
+              <label>Naam<input required type="text" name="naam" /></label>
+              <label>E-mail<input required type="email" name="email" /></label>
+              <label>Datum<input required type="date" name="datum" /></label>
+              <label>Aantal personen<input required min="1" max="20" type="number" name="aantal" /></label>
+            </div>
+            <label>
+              Voorkeur workshop
+              <select name="workshop">
+                <option>Bonbon masterclass</option>
+                <option>Proeverij & rondleiding</option>
+                <option>Team experience</option>
+              </select>
+            </label>
+            <button class="btn gold" type="submit">Reserveren</button>
+            <p id="reserve-message" class="notice" data-empty="true" aria-live="polite"></p>
+          </form>
+        </div>
+        <img loading="lazy" src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&fit=crop&w=1200&q=80" alt="Workshop chocolade maken" />
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <span>© <span data-year></span> De Cacaodroom</span>
+        <span>Reserveer je unieke chocoladebeleving</span>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
